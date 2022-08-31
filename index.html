@@ -1,78 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The twisty Bar</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <!-- add bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- add font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- add google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-    
-
+    <title>The Cocktail DB</title>
+    <!-- bootstrap css cnd link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
-<body>
 
-    <div class="off" id="container">
-        <ul>
-           <li><a href="#">Account</a></li>
-           <li><a href="#">Settings</a></li>
-           
-           <li><button class="toggle">Dark Mode</button></li>
-        </ul>
-       
-    </div>
-    <div class="container">
-        <div class="cocktail-wrapper">
-            <div class="cocktail-search">
-                <h2 class="headline">The twisty Bar</h2>
-
-                <p>
-                    The twisty Bar is a bar that is open from 9:00 to 23:00.
-                    It is located in the center of the city.
-                    It is a great place to enjoy a drink.
-                </p>
-
-                <div class="cocktail-search">
-                    <p>
-                        Search for a cocktail:
-                    </p>
-                </div>
-
-            <div class="cocktail-search-box">
-                <input type="text" class="search-controll" placeholder="enter an ingredient" id="search-input">
-                <button type="submit" class="search-btn-btn" id="search-btn">Search</button>
-                <i class="fa fa-search search-icon" aria-hidden="true"></i>
-
-            </div>
+<body class="bg-dark">
+    <section class="container">
+        <h2 class="text-center text-danger my-4">Seearch Your Favourite Cocktail</h2>
+        <div class="input-group my-4 w-50 mx-auto">
+            <input id="search-field" type="text" class="form-control shadow-none"
+                placeholder="Search Your Favourite Juice" aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+            <button onclick="searchCocktail()" class="btn btn-danger shadow-none" type="button"
+                id="button-search">Search</button>
         </div>
-    </div>
-    <div class="cocktail-result">
-        <h2 class="title">Search result is:</h2>
-        <div id="cocktail">
+    </section>
+
+    <section id="juice-details" class="container">
+
+    </section>
+
+
+    <section class="container">
+        <div id="cocktail-container" class="row row-cols-1 row-cols-md-3 g-4">
 
         </div>
-    </div>
 
-    <div class="cocktail-details">
-        <!-- recipe close button -->
-        <button class="recipe-close-btn" id="recipe-close-btn">
-            <i class="fa fa-times" aria-hidden="true"></i>
-        </button>
+    </section>
 
-        <div class="cocktail-details-content">
 
-        </div>
-    </div>
-    <script src="js/script.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
